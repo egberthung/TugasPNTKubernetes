@@ -24,3 +24,8 @@ spec:
         image: egbert35/tugaspnt:latest
         ports:
         - containerPort: 8080
+        resources:
+          requests:
+            cpu: 100m
+          limits:
+            cpu: 200m
