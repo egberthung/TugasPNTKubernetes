@@ -6,12 +6,13 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
+  ingressClassName: nginx
   tls:
   - hosts:
-    - tugaspnt.local
+    - tugaspnt
     secretName: tugaspnt-tls
   rules:
-  - host: tugaspnt.local
+  - host: tugaspnt
     http:
       paths:
       - path: /
